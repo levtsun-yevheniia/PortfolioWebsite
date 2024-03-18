@@ -1,0 +1,90 @@
+.skills {
+  position: relative;
+  .container {
+    position: absolute;
+    top: 73px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .heading::before {
+      background: linear-gradient(#ffffff, #ffffff);
+    }
+
+    .skills_block {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 62px;
+      .column {
+        display: flex;
+        flex-direction: column;
+        width: 31%;
+
+        .category {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 48px;
+
+          &:last-child {
+            margin-bottom: 0px;
+          }
+          .title {
+            margin: 0 auto 28px;
+            p {
+              font-family: 'Source Sans 3', sans-serif;
+              font-optical-sizing: auto;
+              font-weight: 600;
+              font-style: normal;
+              font-size: 20px;
+              color: #ffffff;
+            }
+          }
+          .items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .row {
+              display: flex;
+              .item {
+                background-color: #ffffff;
+                margin: 0px 10px 16px 0px;
+                padding: 8px 20px 7px;
+                border-radius: 25px;
+                &:last-child {
+                  margin-right: 0px;
+                }
+                p {
+                  font-family: 'Source Sans 3', sans-serif;
+                  font-optical-sizing: auto;
+                  font-weight: 500;
+                  font-style: normal;
+                  color: #000000;
+                }
+              }
+              .item--long {
+                padding: 8px 15px 7px;
+              }
+            }
+          }
+        }
+      }
+
+      //   .column--first, .column--third{
+      //     width: 345px;
+      //   }
+
+      //   .column--second{
+      //     width: ;
+      //   }
+    }
+
+    .button_block {
+      display: flex;
+      margin-top: 45px;
+      .btn--second {
+        margin: 0 auto;
+      }
+    }
+  }
+}

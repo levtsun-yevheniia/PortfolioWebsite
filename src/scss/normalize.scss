@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 1250px;
+  margin: 0 auto;
+}
+
+.heading {
+  background-color: transparent;
+  width: fit-content;
+  position: relative;
+  p {
+    padding: 2px 22px 0px;
+    color: #ffffff;
+    font-family: 'Khand', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+}
+
+.heading::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 25px;
+  padding: 1.5px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.btn {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Khand', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  // transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s, transform 0.1s;
+  // user-select: none;
+  // -webkit-user-select: none;
+  // width: auto;
+}
+
+.btn--first {
+  padding: 10px 17px 9px;
+}
+
+.btn--second {
+  border: 2px solid #ffffff;
+  padding: 17px 35px 13px;
+}
+
+// .button-23:focus-visible {
+//   box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+//   transition: box-shadow .2s;
+// }
+
+// .button-23:active {
+//   background-color: #F7F7F7;
+//   border-color: #000000;
+//   transform: scale(.96);
+// }
+
+// .button-23:disabled {
+//   border-color: #DDDDDD;
+//   color: #DDDDDD;
+//   cursor: not-allowed;
+//   opacity: 1;
+// }
+
+@mixin noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+}

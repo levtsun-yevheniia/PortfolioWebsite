@@ -1,0 +1,156 @@
+.aboutme {
+  background-color: #060918;
+
+  .heading::before {
+    background: linear-gradient(45deg, #6aff9d, #0981ec);
+  }
+
+  .title {
+    padding: 90px 0px 50px;
+  }
+
+  .content {
+    display: flex;
+    padding-bottom: 90px;
+    .firstblock {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      .image {
+        img {
+          border-radius: 20px;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .text {
+        margin-top: 40px;
+        p {
+          color: #ffffff;
+          font-family: 'Manjari', sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 16px;
+          line-height: 20px;
+        }
+
+        .highlight1 {
+          color: transparent;
+          background: linear-gradient(
+            to right,
+            #0087ff 0%,
+            #0087ff 40%,
+            #69bd8d 50%,
+            #ebff00 60%,
+            #ebff00 100%
+          );
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
+        .highlight2 {
+          color: #4cff89;
+        }
+        .highlight3 {
+          color: #e785ff;
+        }
+        .highlight4 {
+          color: #ffba09;
+        }
+      }
+    }
+    .secondblock {
+      width: 65%;
+      margin-left: auto;
+      display: flex;
+      justify-content: space-between;
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+
+        .charact {
+          width: 320px;
+          height: 260px;
+          &__title {
+            position: relative;
+            color: #ffffff;
+            background-color: transparent;
+            width: fit-content;
+            margin-bottom: 25px;
+            border: 2px solid;
+            border-radius: 25px;
+            p {
+              padding: 3.5px 20px 1px;
+              font-family: 'Khand', sans-serif;
+              font-size: 20px;
+              font-weight: 400;
+              font-style: normal;
+              text-transform: uppercase;
+              line-height: 20px;
+            }
+          }
+
+          &__text {
+            color: #ffffff;
+
+            p {
+              font-family: 'Manjari', sans-serif;
+              font-weight: 400;
+              font-style: normal;
+              font-size: 16px;
+              line-height: 20px;
+              &:first-child {
+                margin-bottom: 15px;
+              }
+            }
+          }
+
+          &:last-child {
+            margin-top: 80px;
+          }
+        }
+
+        .charact--first .charact__title {
+          border-color: #0981ec;
+          p {
+            color: transparent;
+            background: linear-gradient(to right, #0981ec, #835ef9);
+            -webkit-background-clip: text;
+            background-clip: text;
+          }
+        }
+
+        .charact--second .charact__title {
+          border-color: #26ff70;
+          p {
+            color: transparent;
+            background: linear-gradient(to right, #26ff70, #0981ec);
+            -webkit-background-clip: text;
+            background-clip: text;
+          }
+        }
+
+        .charact--third .charact__title {
+          border-color: #835ef9;
+          p {
+            color: transparent;
+            background: linear-gradient(to right, #835ef9, #26ff70);
+            -webkit-background-clip: text;
+            background-clip: text;
+          }
+        }
+
+        .charact--forth .charact__title {
+          border-color: #0981ec;
+          p {
+            color: transparent;
+            background: linear-gradient(to right, #835ef9, #2699ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+          }
+        }
+      }
+    }
+  }
+}

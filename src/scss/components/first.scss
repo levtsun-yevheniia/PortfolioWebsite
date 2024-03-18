@@ -1,0 +1,75 @@
+.first {
+  height: 100vh;
+  position: relative;
+
+  &__background {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    color: white;
+    font-family: 'Manjari', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+
+    .text {
+      text-align: center;
+
+      h1 {
+        font-family: 'Kosugi', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 96px;
+        padding: 18px 0px;
+      }
+    }
+
+    .located {
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+
+      &__text {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: flex-end;
+
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -15%);
+
+    .first__links {
+      display: flex;
+      align-items: center;
+
+      .linkedIn_icon {
+        width: 55px;
+        height: 55px;
+      }
+
+      .github_icon {
+        margin-left: 22px;
+        width: 62px;
+        height: 62px;
+      }
+    }
+  }
+}
