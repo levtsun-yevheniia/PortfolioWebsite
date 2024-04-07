@@ -1,13 +1,16 @@
 .skills {
   position: relative;
+  height: 790px;
   .container {
     position: absolute;
-    top: 73px;
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
 
-    .heading::before {
-      background: linear-gradient(#ffffff, #ffffff);
+    .title {
+      .heading::before {
+        background: linear-gradient(#ffffff, #ffffff);
+      }
     }
 
     .skills_block {
@@ -69,22 +72,12 @@
           }
         }
       }
-
-      //   .column--first, .column--third{
-      //     width: 345px;
-      //   }
-
-      //   .column--second{
-      //     width: ;
-      //   }
     }
 
     .button_block {
       display: flex;
+      flex-direction: column;
       margin-top: 45px;
-      .btn--second {
-        margin: 0 auto;
-      }
     }
   }
 }

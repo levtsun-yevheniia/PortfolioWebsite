@@ -1,0 +1,84 @@
+.contact {
+  height: 650px;
+  background-color: #060918;
+  .container {
+    width: 1115px;
+
+    .title {
+      padding: 90px 0px 50px;
+
+      .heading::before {
+        background: linear-gradient(45deg, #835ef9, #0981ec);
+      }
+    }
+
+    .block {
+      display: flex;
+
+      &__text {
+        font-family: 'Khand', sans-serif;
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 48px;
+        text-transform: uppercase;
+      }
+
+      &__photo {
+        margin-left: auto;
+        img {
+          width: 142px;
+          height: 142px;
+        }
+      }
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      margin-top: 55px;
+
+      color: #ffffff;
+      font-family: 'Manjari', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+
+      &__linkedIn {
+        height: 66px;
+        margin-right: 42px;
+        img {
+          height: 66px;
+          width: 66px;
+        }
+      }
+
+      &__gmail,
+      &__number {
+        height: fit-content;
+        background-color: transparent;
+        width: fit-content;
+        position: relative;
+        margin-right: 30px;
+        p {
+          padding: 22px 34px 20px;
+        }
+      }
+
+      &__gmail::before,
+      &__number::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 40px;
+        padding: 1.5px;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        background: linear-gradient(45deg, #26ff70, #0981ec);
+      }
+
+      &__number::before {
+        background: linear-gradient(45deg, #835ef9, #0057ff);
+      }
+    }
+  }
+}

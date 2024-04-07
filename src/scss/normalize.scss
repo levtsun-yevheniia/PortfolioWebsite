@@ -48,26 +48,58 @@ body {
   background-color: transparent;
   border: 1px solid #ffffff;
   border-radius: 25px;
-  box-sizing: border-box;
+  cursor: none;
   color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
   font-family: 'Khand', sans-serif;
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
   text-transform: uppercase;
-  line-height: 20px;
-  margin: 0;
-  outline: none;
   position: relative;
+  margin: 0;
   text-align: center;
   text-decoration: none;
+  transition: 0.4s color linear;
+  transition: transform 0.5s linear;
+
+  box-sizing: border-box;
+  display: inline-block;
+  line-height: 20px;
+  outline: none;
+
   touch-action: manipulation;
-  // transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s, transform 0.1s;
-  // user-select: none;
-  // -webkit-user-select: none;
-  // width: auto;
+  z-index: 0;
+  overflow: hidden;
+
+  &::after {
+    background-color: rgb(255, 255, 255);
+    border-radius: 120px;
+
+    content: '';
+    display: block;
+    height: 230%;
+    width: 120%;
+    position: absolute;
+    left: -10%;
+    bottom: 0;
+    transform: translateY(100%);
+    transform-origin: top left;
+    transition: 0.5s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+  }
+  &.moved-up::after {
+    transform: translateY(-200%);
+  }
+
+  &:hover::after {
+    transform: translateY(40%);
+  }
+
+  &:hover {
+    border-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
 }
 
 .btn--first {
@@ -77,6 +109,7 @@ body {
 .btn--second {
   border: 2px solid #ffffff;
   padding: 17px 35px 13px;
+  margin: 0 auto;
 }
 
 // .button-23:focus-visible {

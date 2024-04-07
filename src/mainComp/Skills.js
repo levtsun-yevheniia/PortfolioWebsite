@@ -1,6 +1,8 @@
 import skillsbackgroundimage from '../assets/skills.jpg';
+import useAnimatedButtons from '../useAnimatedButtons';
 
-function Skills() {
+const Skills = ({ onMouseHover, onMouseHoverOut }) => {
+  useAnimatedButtons();
   return (
     <div className="skills">
       <img className="first__background" src={skillsbackgroundimage} alt="Main" />
@@ -188,11 +190,17 @@ function Skills() {
           </div>
         </div>
         <div className="button_block">
-          <div className="btn btn--second">View CV</div>
+          <div
+            className="btn btn--second"
+            onMouseEnter={onMouseHover}
+            onMouseLeave={onMouseHoverOut}
+          >
+            View CV
+          </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Skills;

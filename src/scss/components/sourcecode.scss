@@ -1,0 +1,31 @@
+.sourcecode {
+  background-image: url('../../assets/sourcecodebackground.jpg');
+  background-size: cover;
+  height: auto;
+
+  .title {
+    padding-top: 90px;
+    .heading {
+      margin: 0 auto 0px;
+    }
+    .heading::before {
+      background: linear-gradient(#ffffff, #ffffff);
+    }
+  }
+
+  .head {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+    font-family: 'Khand', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+  }
+
+  .button_block {
+    display: flex;
+    margin-top: 80px;
+    padding-bottom: 90px;
+  }
+}
