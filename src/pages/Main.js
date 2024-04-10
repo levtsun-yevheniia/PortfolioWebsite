@@ -11,50 +11,6 @@ import gsap from 'gsap';
 import React from 'react';
 
 const Main = () => {
-  //   const $bigBall = document.querySelector('.cursor__ball--big');
-  //   const $smallBall = document.querySelector('.cursor__ball--small');
-  //   $bigBall.classList.add('hovered');
-  //   $smallBall.classList.add('hovered');
-  // };
-
-  // const onMouseHoverOut = () => {
-  //   const $bigBall = document.querySelector('.cursor__ball--big');
-  //   const $smallBall = document.querySelector('.cursor__ball--small');
-  //   $bigBall.classList.remove('hovered');
-  //   $smallBall.classList.remove('hovered');
-  // };
-
-  // React.useEffect(() => {
-  //   const $bigBall = document.querySelector('.cursor__ball--big');
-  //   const $smallBall = document.querySelector('.cursor__ball--small');
-  //   const $hoverables = document.querySelectorAll('.hoverable');
-
-  //   let mouseX = 0;
-  //   let mouseY = 0;
-
-  //   function onMouseMove(e) {
-  //     mouseX = e.clientX;
-  //     mouseY = e.clientY;
-  //     gsap.to($bigBall, { duration: 0.4, x: mouseX - 15, y: mouseY - 15 });
-  //     gsap.to($smallBall, { duration: 0.1, x: mouseX - 5, y: mouseY - 7 });
-  //   }
-
-  //   window.addEventListener('mousemove', onMouseMove);
-
-  //   for (let i = 0; i < $hoverables.length; i++) {
-  //     $hoverables[i].addEventListener('mouseenter', onMouseHover);
-  //     $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
-  //   }
-
-  //   return () => {
-  //     document.body.removeEventListener('mousemove', onMouseMove);
-  //     for (let i = 0; i < $hoverables.length; i++) {
-  //       $hoverables[i].removeEventListener('mouseenter', onMouseHover);
-  //       $hoverables[i].removeEventListener('mouseleave', onMouseHoverOut);
-  //     }
-  //   };
-  // }, []);
-
   const onMouseHover = () => {
     const $bigBall = document.querySelector('.cursor__ball--big');
     const $smallBall = document.querySelector('.cursor__ball--small');
@@ -74,7 +30,6 @@ const Main = () => {
     const $smallBall = document.querySelector('.cursor__ball--small');
     $bigBall.classList.add('copied');
     $smallBall.classList.add('copied');
-    console.log('click');
   };
 
   const onMouseHoverCopy = () => {
@@ -84,7 +39,6 @@ const Main = () => {
     $smallBall.classList.remove('copied');
     $bigBall.classList.add('clicktocopy');
     $smallBall.classList.add('clicktocopy');
-    console.log('hover');
   };
 
   const onMouseHoverOutForCopy = () => {
@@ -94,7 +48,6 @@ const Main = () => {
     $smallBall.classList.remove('copied');
     $bigBall.classList.remove('clicktocopy');
     $smallBall.classList.remove('clicktocopy');
-    console.log('remove');
   };
 
   React.useEffect(() => {

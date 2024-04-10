@@ -8,10 +8,9 @@ import lastimage from '../assets/lastproject.jpg';
 import firstprojectvideo from '../assets/first_project_video.gif';
 import thirdprojectimage from '../assets/planningproject2.jpg';
 
-const Projects = ({ onMouseHover, onMouseHoverOut }) => {
-  const [flipped, setFlipped] = React.useState(false);
-  console.log(flipped);
+import { useRef } from 'react';
 
+const Projects = ({ onMouseHover, onMouseHoverOut }) => {
   const [sections, setSections] = React.useState({
     1: { isOpen: false },
     2: { isOpen: false },
@@ -34,7 +33,7 @@ const Projects = ({ onMouseHover, onMouseHoverOut }) => {
   };
 
   return (
-    <div className="projects">
+    <div className="projects" id="projects">
       <div className="title">
         <div className="heading">
           <p>Projects</p>
@@ -79,20 +78,27 @@ const Projects = ({ onMouseHover, onMouseHoverOut }) => {
                     </p>
                   </div>
                   <div className="buttons">
-                    <button
-                      className="btn btn--first"
-                      onMouseEnter={onMouseHover}
-                      onMouseLeave={onMouseHoverOut}
+                    <a href="http://yourstylishontario.infinityfreeapp.com" target="_blank">
+                      <button
+                        className="btn btn--first"
+                        onMouseEnter={onMouseHover}
+                        onMouseLeave={onMouseHoverOut}
+                      >
+                        Website
+                      </button>
+                    </a>
+                    <a
+                      href="https://github.com/levtsun-yevheniia/React-Clothes-Shop"
+                      target="_blank"
                     >
-                      Website
-                    </button>
-                    <button
-                      className="btn btn--first"
-                      onMouseEnter={onMouseHover}
-                      onMouseLeave={onMouseHoverOut}
-                    >
-                      Github
-                    </button>
+                      <button
+                        className="btn btn--first"
+                        onMouseEnter={onMouseHover}
+                        onMouseLeave={onMouseHoverOut}
+                      >
+                        Github
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -107,7 +113,7 @@ const Projects = ({ onMouseHover, onMouseHoverOut }) => {
                   <img src={secondimage} alt="First project image" />
                   <div className="text">
                     <p className="text__head">WEBSITE</p>
-                    <p className="text__title">Portfolio</p>
+                    <p className="text__title">PORTFOLIO</p>
                     <p className="text__technologies">React, JavaScript, SaSS & CSS, Design</p>
                   </div>
                 </div>
@@ -121,21 +127,29 @@ const Projects = ({ onMouseHover, onMouseHoverOut }) => {
                       for other elements which is a great way to highlight important details.
                     </p>
                   </div>
+
                   <div className="buttons">
-                    <button
-                      className="btn btn--first"
-                      onMouseEnter={onMouseHover}
-                      onMouseLeave={onMouseHoverOut}
+                    <a
+                      href="http://yevheniialevtsunwebdeveloper.infinityfreeapp.com"
+                      target="_blank"
                     >
-                      Website
-                    </button>
-                    <button
-                      className="btn btn--first"
-                      onMouseEnter={onMouseHover}
-                      onMouseLeave={onMouseHoverOut}
-                    >
-                      Github
-                    </button>
+                      <button
+                        className="btn btn--first"
+                        onMouseEnter={onMouseHover}
+                        onMouseLeave={onMouseHoverOut}
+                      >
+                        Website
+                      </button>
+                    </a>
+                    <a href="https://github.com/levtsun-yevheniia/PortfolioWebsite" target="_blank">
+                      <button
+                        className="btn btn--first"
+                        onMouseEnter={onMouseHover}
+                        onMouseLeave={onMouseHoverOut}
+                      >
+                        Github
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -165,13 +179,18 @@ const Projects = ({ onMouseHover, onMouseHoverOut }) => {
                     </p>
                   </div>
                   <div className="buttons">
-                    <button
-                      className="btn btn--first"
-                      onMouseEnter={onMouseHover}
-                      onMouseLeave={onMouseHoverOut}
+                    <a
+                      href="https://github.com/levtsun-yevheniia/Increase-Your-Productivity"
+                      target="_blank"
                     >
-                      Github
-                    </button>
+                      <button
+                        className="btn btn--first"
+                        onMouseEnter={onMouseHover}
+                        onMouseLeave={onMouseHoverOut}
+                      >
+                        Github
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -191,13 +210,15 @@ const Projects = ({ onMouseHover, onMouseHoverOut }) => {
                 </div>
                 <div className="item-inner__back item-inner__back--last">
                   <div className="buttons">
-                    <button
-                      className="btn btn--first"
-                      onMouseEnter={onMouseHover}
-                      onMouseLeave={onMouseHoverOut}
-                    >
-                      Github
-                    </button>
+                    <a href="https://github.com/levtsun-yevheniia" target="_blank">
+                      <button
+                        className="btn btn--first"
+                        onMouseEnter={onMouseHover}
+                        onMouseLeave={onMouseHoverOut}
+                      >
+                        Github
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>

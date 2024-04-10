@@ -4,7 +4,7 @@ import useAnimatedButtons from '../useAnimatedButtons';
 const Skills = ({ onMouseHover, onMouseHoverOut }) => {
   useAnimatedButtons();
   return (
-    <div className="skills">
+    <div className="skills" id="skills">
       <img className="first__background" src={skillsbackgroundimage} alt="Main" />
       <div className="container">
         <div className="title">
