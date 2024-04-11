@@ -6,49 +6,14 @@ import Projects from '../mainComp/Projects';
 import SourceCode from '../mainComp/SourceCode';
 import Contact from '../mainComp/Contact';
 
+import { useCursor } from '../utils/cursorContext';
+
 import gsap from 'gsap';
 
 import React from 'react';
 
 const Main = () => {
-  const onMouseHover = () => {
-    const $bigBall = document.querySelector('.cursor__ball--big');
-    const $smallBall = document.querySelector('.cursor__ball--small');
-    $bigBall.classList.add('hovered');
-    $smallBall.classList.add('hovered');
-  };
-
-  const onMouseHoverOut = () => {
-    const $bigBall = document.querySelector('.cursor__ball--big');
-    const $smallBall = document.querySelector('.cursor__ball--small');
-    $bigBall.classList.remove('hovered');
-    $smallBall.classList.remove('hovered');
-  };
-
-  const onClickCopy = () => {
-    const $bigBall = document.querySelector('.cursor__ball--big');
-    const $smallBall = document.querySelector('.cursor__ball--small');
-    $bigBall.classList.add('copied');
-    $smallBall.classList.add('copied');
-  };
-
-  const onMouseHoverCopy = () => {
-    const $bigBall = document.querySelector('.cursor__ball--big');
-    const $smallBall = document.querySelector('.cursor__ball--small');
-    $bigBall.classList.remove('copied');
-    $smallBall.classList.remove('copied');
-    $bigBall.classList.add('clicktocopy');
-    $smallBall.classList.add('clicktocopy');
-  };
-
-  const onMouseHoverOutForCopy = () => {
-    const $bigBall = document.querySelector('.cursor__ball--big');
-    const $smallBall = document.querySelector('.cursor__ball--small');
-    $bigBall.classList.remove('copied');
-    $smallBall.classList.remove('copied');
-    $bigBall.classList.remove('clicktocopy');
-    $smallBall.classList.remove('clicktocopy');
-  };
+  const { onMouseHover, onMouseHoverOut } = useCursor();
 
   React.useEffect(() => {
     const $bigBall = document.querySelector('.cursor__ball--big');
@@ -100,19 +65,14 @@ const Main = () => {
           </svg>
         </div>
       </div>
-      <Header onMouseHover={onMouseHover} onMouseHoverOut={onMouseHoverOut} />
-      <First onMouseHover={onMouseHover} onMouseHoverOut={onMouseHoverOut} />
+
+      <Header />
+      <First />
       <AboutMe />
-      <Skills onMouseHover={onMouseHover} onMouseHoverOut={onMouseHoverOut} />
-      <Projects onMouseHover={onMouseHover} onMouseHoverOut={onMouseHoverOut} />
-      <SourceCode onMouseHover={onMouseHover} onMouseHoverOut={onMouseHoverOut} />
-      <Contact
-        onMouseHover={onMouseHover}
-        onMouseHoverOut={onMouseHoverOut}
-        onClickCopy={onClickCopy}
-        onMouseHoverOutForCopy={onMouseHoverOutForCopy}
-        onMouseHoverCopy={onMouseHoverCopy}
-      />
+      <Skills />
+      <Projects />
+      <SourceCode />
+      <Contact />
     </div>
   );
 };

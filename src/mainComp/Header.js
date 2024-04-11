@@ -1,7 +1,9 @@
-import useAnimatedButtons from '../useAnimatedButtons';
-import { useRef } from 'react';
+import useAnimatedButtons from '../utils/useAnimatedButtons';
+import { useCursor } from '../utils/cursorContext';
+import React from 'react';
 
-const Header = ({ onMouseHover, onMouseHoverOut }) => {
+const Header = () => {
+  const { onMouseHover, onMouseHoverOut, onClickCursorAnimation } = useCursor();
   useAnimatedButtons();
 
   const scrollToSection = (id) => {
@@ -22,13 +24,34 @@ const Header = ({ onMouseHover, onMouseHoverOut }) => {
           <div className="menu__options">
             <ul>
               <li onMouseEnter={onMouseHover} onMouseLeave={onMouseHoverOut}>
-                <a onClick={() => scrollToSection('about')}>About me</a>
+                <a
+                  onClick={() => {
+                    scrollToSection('about');
+                    onClickCursorAnimation();
+                  }}
+                >
+                  About me
+                </a>
               </li>
               <li onMouseEnter={onMouseHover} onMouseLeave={onMouseHoverOut}>
-                <a onClick={() => scrollToSection('projects')}>Projects</a>
+                <a
+                  onClick={() => {
+                    scrollToSection('projects');
+                    onClickCursorAnimation();
+                  }}
+                >
+                  Projects
+                </a>
               </li>
               <li onMouseEnter={onMouseHover} onMouseLeave={onMouseHoverOut}>
-                <a onClick={() => scrollToSection('skills')}>Skills</a>
+                <a
+                  onClick={() => {
+                    scrollToSection('skills');
+                    onClickCursorAnimation();
+                  }}
+                >
+                  Skills
+                </a>
               </li>
             </ul>
           </div>
@@ -38,7 +61,14 @@ const Header = ({ onMouseHover, onMouseHoverOut }) => {
               onMouseEnter={onMouseHover}
               onMouseLeave={onMouseHoverOut}
             >
-              <a onClick={() => scrollToSection('contact')}>Contact me</a>
+              <a
+                onClick={() => {
+                  scrollToSection('contact');
+                  onClickCursorAnimation();
+                }}
+              >
+                Contact me
+              </a>
             </button>
           </div>
         </div>

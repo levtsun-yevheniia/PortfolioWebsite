@@ -1,4 +1,7 @@
-const SourceCode = ({ onMouseHover, onMouseHoverOut }) => {
+import { useCursor } from '../utils/cursorContext';
+
+const SourceCode = () => {
+  const { onMouseHover, onMouseHoverOut, onClickCursorAnimation } = useCursor();
   return (
     <div className="sourcecode">
       <div className="container">
@@ -15,6 +18,7 @@ const SourceCode = ({ onMouseHover, onMouseHoverOut }) => {
             className="btn btn--second"
             onMouseEnter={onMouseHover}
             onMouseLeave={onMouseHoverOut}
+            onClick={onClickCursorAnimation}
           >
             Show me
           </div>

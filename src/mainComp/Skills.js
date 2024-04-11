@@ -1,7 +1,9 @@
 import skillsbackgroundimage from '../assets/skills.jpg';
-import useAnimatedButtons from '../useAnimatedButtons';
+import useAnimatedButtons from '../utils/useAnimatedButtons';
+import { useCursor } from '../utils/cursorContext';
 
-const Skills = ({ onMouseHover, onMouseHoverOut }) => {
+const Skills = () => {
+  const { onMouseHover, onMouseHoverOut, onClickCursorAnimation } = useCursor();
   useAnimatedButtons();
   return (
     <div className="skills" id="skills">
@@ -194,6 +196,7 @@ const Skills = ({ onMouseHover, onMouseHoverOut }) => {
             className="btn btn--second"
             onMouseEnter={onMouseHover}
             onMouseLeave={onMouseHoverOut}
+            onClick={onClickCursorAnimation}
           >
             View CV
           </div>

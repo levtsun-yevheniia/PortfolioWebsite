@@ -21,6 +21,7 @@
       svg {
         height: fit-content;
         width: auto;
+        // transition: scale 0.1s;
         circle {
           margin: auto;
           fill: none;
@@ -61,6 +62,22 @@
           circle {
             fill: none;
             r: 20px;
+          }
+        }
+      }
+
+      &.clicked {
+        // svg {
+        //   transform: scale(0.8);
+        //   circle {
+        //     // transform: scale(0.8);
+        //   }
+        // }
+        svg {
+          circle {
+            fill: none;
+            r: 12px;
+            transition: r 0.05s;
           }
         }
       }

@@ -1,13 +1,18 @@
 import myphoto from '../assets/contact_photo.png';
 import linkedinphoto from '../assets/contact_linkedin.png';
 
-const Contact = ({
-  onClickCopy,
-  onMouseHoverOutForCopy,
-  onMouseHover,
-  onMouseHoverOut,
-  onMouseHoverCopy,
-}) => {
+import { useCursor } from '../utils/cursorContext';
+
+const Contact = () => {
+  const {
+    onClickCopy,
+    onMouseHoverOutForCopy,
+    onMouseHover,
+    onMouseHoverOut,
+    onMouseHoverCopy,
+    onClickCursorAnimation,
+  } = useCursor();
+
   function copyText(id) {
     var copiedText = document.getElementById(id).innerText;
 
@@ -50,6 +55,7 @@ const Contact = ({
               alt="My photo"
               onMouseEnter={onMouseHover}
               onMouseLeave={onMouseHoverOut}
+              onClick={onClickCursorAnimation}
             />
           </div>
           <div

@@ -2,11 +2,15 @@ import './scss/app.scss';
 import './App.css';
 import Main from './pages/Main';
 
+import { CursorProvider } from './utils/cursorContext';
+
 function App() {
   return (
-    <div className="content">
-      <Main />
-    </div>
+    <CursorProvider>
+      <div className="content">
+        <Main />
+      </div>
+    </CursorProvider>
   );
 }
 

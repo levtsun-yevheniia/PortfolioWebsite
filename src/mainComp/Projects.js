@@ -7,10 +7,11 @@ import lastimage from '../assets/lastproject.jpg';
 
 import firstprojectvideo from '../assets/first_project_video.gif';
 import thirdprojectimage from '../assets/planningproject2.jpg';
+import { useCursor } from '../utils/cursorContext';
 
-import { useRef } from 'react';
+const Projects = () => {
+  const { onMouseHover, onMouseHoverOut, onClickCursorAnimation } = useCursor();
 
-const Projects = ({ onMouseHover, onMouseHoverOut }) => {
   const [sections, setSections] = React.useState({
     1: { isOpen: false },
     2: { isOpen: false },
@@ -83,6 +84,7 @@ const Projects = ({ onMouseHover, onMouseHoverOut }) => {
                         className="btn btn--first"
                         onMouseEnter={onMouseHover}
                         onMouseLeave={onMouseHoverOut}
+                        onClick={onClickCursorAnimation}
                       >
                         Website
                       </button>
@@ -95,6 +97,7 @@ const Projects = ({ onMouseHover, onMouseHoverOut }) => {
                         className="btn btn--first"
                         onMouseEnter={onMouseHover}
                         onMouseLeave={onMouseHoverOut}
+                        onClick={onClickCursorAnimation}
                       >
                         Github
                       </button>
@@ -137,6 +140,7 @@ const Projects = ({ onMouseHover, onMouseHoverOut }) => {
                         className="btn btn--first"
                         onMouseEnter={onMouseHover}
                         onMouseLeave={onMouseHoverOut}
+                        onClick={onClickCursorAnimation}
                       >
                         Website
                       </button>
@@ -146,6 +150,7 @@ const Projects = ({ onMouseHover, onMouseHoverOut }) => {
                         className="btn btn--first"
                         onMouseEnter={onMouseHover}
                         onMouseLeave={onMouseHoverOut}
+                        onClick={onClickCursorAnimation}
                       >
                         Github
                       </button>
@@ -187,6 +192,7 @@ const Projects = ({ onMouseHover, onMouseHoverOut }) => {
                         className="btn btn--first"
                         onMouseEnter={onMouseHover}
                         onMouseLeave={onMouseHoverOut}
+                        onClick={onClickCursorAnimation}
                       >
                         Github
                       </button>
@@ -215,6 +221,7 @@ const Projects = ({ onMouseHover, onMouseHoverOut }) => {
                         className="btn btn--first"
                         onMouseEnter={onMouseHover}
                         onMouseLeave={onMouseHoverOut}
+                        onClick={onClickCursorAnimation}
                       >
                         Github
                       </button>
