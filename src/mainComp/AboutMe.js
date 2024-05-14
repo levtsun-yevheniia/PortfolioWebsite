@@ -1,6 +1,12 @@
 import me from '../assets/photo.jpg';
 
-function AboutMe() {
+import React from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+const AboutMe = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
   return (
     <div className="aboutme" id="about">
       <div className="container">
@@ -9,8 +15,8 @@ function AboutMe() {
             <p>About me</p>
           </div>
         </div>
-        <div className="content">
-          <div className="firstblock">
+        <div className="content" id="content">
+          <div className="firstblock" id="firstblock">
             <div className="image">
               <img src={me} alt="Me" />
             </div>
@@ -48,10 +54,9 @@ function AboutMe() {
                 </div>
                 <div className="charact__text">
                   <p>
-                    With strong analytical and organizational skills, I excel at dissecting complex
-                    problems and devising effective solutions. I approach challenges methodically,
-                    breaking them down into manageable tasks and implementing systematic approaches
-                    for resolution.{' '}
+                    With strong analytical and organizational skills, I approach challenges
+                    methodically, breaking them down into manageable tasks and implementing
+                    systematic approaches for resolution.{' '}
                   </p>
                   <p>
                     My critical and strategic thinking abilities enable me to tackle obstacles with
@@ -90,9 +95,9 @@ function AboutMe() {
                   </p>
                   <p>
                     {' '}
-                    My ability to think outside the box allows me to devise innovative solutions
-                    that others might overlook. By embracing unconventional thinking, I aim to bring
-                    fresh perspectives and drive impactful outcomes in my work.
+                    My ability to think outside the box allows me to devise innovative solutions. By
+                    embracing unconventional thinking, I aim to bring fresh perspectives and drive
+                    impactful outcomes in my work.
                   </p>
                 </div>
               </div>
@@ -102,6 +107,6 @@ function AboutMe() {
       </div>
     </div>
   );
-}
+};
 
 export default AboutMe;

@@ -8,14 +8,12 @@ import Contact from '../mainComp/Contact';
 
 import { useCursor } from '../utils/cursorContext';
 
+import React from 'react';
+import { useLayoutEffect, useRef, useEffect } from 'react';
 import gsap from 'gsap';
 
-import React from 'react';
-
 const Main = () => {
-  const { onMouseHover, onMouseHoverOut } = useCursor();
-
-  React.useEffect(() => {
+  useEffect(() => {
     const $bigBall = document.querySelector('.cursor__ball--big');
     const $smallBall = document.querySelector('.cursor__ball--small');
     const $hoverables = document.querySelectorAll('.hoverable');
@@ -46,8 +44,57 @@ const Main = () => {
     };
   }, []);
 
+  const comp = useRef(null);
+
+  useLayoutEffect(() => {
+    let context = gsap.context(() => {
+      const t1 = gsap.timeline();
+      t1.from(
+        [
+          '#title5',
+          '#title2',
+          '#title1',
+          '#title3',
+          '#title4',
+          '#title6',
+          '#title7',
+          '#title8',
+          '#title9',
+          '#title10',
+        ],
+        {
+          opacity: 0,
+          y: '-=30',
+          stagger: 0.07,
+        },
+      ).to('#slider', {
+        yPercent: '-100',
+        duration: 1,
+        delay: 0.3,
+      });
+    }, comp);
+    return () => context.revert();
+  }, []);
+
+  const { onMouseHover, onMouseHoverOut } = useCursor();
+
   return (
-    <div className="main_container">
+    <div className="main_container" ref={comp}>
+      <div className="loader" id="slider">
+        <div className="loading">
+          <p id="title1">L</p>
+          <p id="title2">o</p>
+          <p id="title3">a</p>
+          <p id="title4">d</p>
+          <p id="title5">i</p>
+          <p id="title6">n</p>
+          <p id="title7">g</p>
+          <p id="title8">.</p>
+          <p id="title9">.</p>
+          <p id="title10">.</p>
+        </div>
+      </div>
+
       <div class="cursor">
         <div class="cursor__ball cursor__ball--big ">
           <svg>

@@ -14,14 +14,16 @@ const SourceCode = () => {
           <p>Visit my GitHub repository for a comprehensive view of my coding work.</p>
         </div>
         <div className="button_block">
-          <div
-            className="btn btn--second"
-            onMouseEnter={onMouseHover}
-            onMouseLeave={onMouseHoverOut}
-            onClick={onClickCursorAnimation}
-          >
-            Show me
-          </div>
+          <a href="https://github.com/levtsun-yevheniia" target="_blank">
+            <div
+              className="btn btn--second"
+              onMouseEnter={onMouseHover}
+              onMouseLeave={onMouseHoverOut}
+              onClick={onClickCursorAnimation}
+            >
+              Show me
+            </div>
+          </a>
         </div>
       </div>
     </div>

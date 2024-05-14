@@ -50,13 +50,15 @@ const Contact = () => {
         </div>
         <div className="links">
           <div className="links__linkedIn">
-            <img
-              src={linkedinphoto}
-              alt="My photo"
-              onMouseEnter={onMouseHover}
-              onMouseLeave={onMouseHoverOut}
-              onClick={onClickCursorAnimation}
-            />
+            <a href="https://www.linkedin.com/in/yevheniia-levtsun/" target="_blank">
+              <img
+                src={linkedinphoto}
+                alt="My photo"
+                onMouseEnter={onMouseHover}
+                onMouseLeave={onMouseHoverOut}
+                onClick={onClickCursorAnimation}
+              />
+            </a>
           </div>
           <div
             class="links__gmail"

@@ -33,12 +33,11 @@
     .text {
       text-align: center;
 
-      h1 {
-        font-family: 'Kosugi', sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 96px;
-        padding: 18px 0px;
+      h2 {
+        font-size: 106px;
+        font-family: 'Khand', sans-serif;
+        font-weight: 200;
+        height: 140px;
       }
     }
 
@@ -46,6 +45,44 @@
       display: flex;
       align-items: center;
       margin: 0 auto;
+
+      &__image {
+        .notice {
+          font-size: 28px;
+          text-align: center;
+          margin-top: 6px;
+
+          .world {
+            fill: rgb(255, 255, 255);
+            width: 1em;
+            height: 1em;
+            display: inline-block;
+            border-radius: 50%;
+            overflow: hidden;
+            white-space: nowrap;
+            border: 1px solid rgb(255, 255, 255);
+            box-sizing: border-box;
+            background-image: url(#icon-world);
+
+            svg {
+              width: 4em;
+              height: 1em;
+              margin-top: calc(1px + -0.05em);
+              display: inline;
+              animation: world-scroll 3.5s linear infinite;
+            }
+          }
+        }
+
+        @keyframes world-scroll {
+          from {
+            margin-left: -2.75em;
+          }
+          to {
+            margin-left: -1em;
+          }
+        }
+      }
 
       &__text {
         margin-left: 20px;

@@ -1,4 +1,7 @@
 import React from 'react';
+
+import gsap from 'gsap';
+
 import arrow from '../assets/arrow.png';
 import firstimage from '../assets/first_project3.jpg';
 import secondimage from '../assets/portfolioproject.png';
@@ -6,6 +9,7 @@ import thirdimage from '../assets/planningproject.jpg';
 import lastimage from '../assets/lastproject.jpg';
 
 import firstprojectvideo from '../assets/first_project_video.gif';
+import secondprojectvideo from '../assets/SecondProjectVid.gif';
 import thirdprojectimage from '../assets/planningproject2.jpg';
 import { useCursor } from '../utils/cursorContext';
 
@@ -33,6 +37,19 @@ const Projects = () => {
     }));
   };
 
+  const t1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.projects',
+      toggleActions: 'restart none none none',
+      ease: 'power1.inOut',
+    },
+  });
+
+  t1.to('#scroll_btn_block', { x: -50, duration: 2 }).to('#scroll_btn_block', {
+    x: 0,
+    duration: 1.5,
+  });
+
   return (
     <div className="projects" id="projects">
       <div className="title">
@@ -45,7 +62,7 @@ const Projects = () => {
           <p>Take a look at some of my projects</p>
         </div>
         <div className="content__slider">
-          <div className="scroll_btn_block">
+          <div className="scroll_btn_block" id="scroll_btn_block">
             <img className="arrow" src={arrow} alt="arrow_image"></img>
             <div className="scroll">
               <p>Scroll</p>
@@ -121,7 +138,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="item-inner__back item-inner__back--second">
-                  <img src={firstprojectvideo} alt="First project video" />
+                  <img src={secondprojectvideo} alt="First project video" />
                   <div className="text">
                     <p className="text__title">About</p>
                     <p className="text__about">
