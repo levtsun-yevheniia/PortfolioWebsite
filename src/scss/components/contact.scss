@@ -80,5 +80,14 @@
         background: linear-gradient(45deg, #835ef9, #0057ff);
       }
     }
+
+    @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+      width: 85%;
+      .block {
+        &__text {
+          font-size: 40px;
+        }
+      }
+    }
   }
 }

@@ -18,7 +18,6 @@
         color: rgb(255, 255, 255);
         font-family: 'Khand', sans-serif;
         font-weight: 400;
-        font-style: normal;
         font-size: 96px;
         text-transform: uppercase;
       }
@@ -47,7 +46,6 @@
             color: rgb(255, 255, 255);
             font-family: 'Khand', sans-serif;
             font-weight: 300;
-            font-style: normal;
             font-size: 20px;
             text-transform: uppercase;
           }
@@ -78,10 +76,11 @@
 
             &__front {
               img {
-                border-radius: 15px;
-                object-fit: cover;
                 height: 440px;
                 width: 300px;
+
+                border-radius: 15px;
+                object-fit: cover;
               }
               .text {
                 height: 102px;
@@ -130,6 +129,12 @@
                 width: 400px;
                 height: 201px;
                 border-radius: 10px;
+              }
+              video {
+                margin-top: 26px;
+                width: 400px;
+                height: 201px;
+                border-radius: 15px;
               }
               .text {
                 margin: 0 auto;
@@ -186,18 +191,25 @@
           &.active {
             width: 450px;
             transition: width 0.4s ease-out;
-            // transition-duration: 1s;
           }
         }
-
-        // &:hover .item {
-        //   width: 450px;
-        // }
       }
     }
 
     &__slider::-webkit-scrollbar {
       display: none;
+    }
+
+    @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+      &__slider {
+        padding-left: 270px;
+      }
+      &__title {
+        p {
+          font-weight: 300;
+          font-size: 76px;
+        }
+      }
     }
   }
 }

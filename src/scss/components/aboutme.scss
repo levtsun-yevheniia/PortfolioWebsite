@@ -153,4 +153,29 @@
       }
     }
   }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    .content {
+      .secondblock {
+        flex-direction: column;
+        .column {
+          margin-left: 0px;
+          align-items: center;
+
+          .charact {
+            width: 500px;
+            height: auto;
+
+            &:last-child {
+              margin-top: 40px;
+            }
+          }
+
+          .charact--third {
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+  }
 }
