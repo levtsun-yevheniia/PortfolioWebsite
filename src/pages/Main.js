@@ -9,10 +9,14 @@ import Contact from '../mainComp/Contact';
 import { useCursor } from '../utils/cursorContext';
 
 import React from 'react';
-import { useLayoutEffect, useRef, useEffect } from 'react';
+import { useLayoutEffect, useRef, useEffect, useState } from 'react';
 import gsap from 'gsap';
 
 const Main = () => {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const videoRef = useRef(null);
+  const comp = useRef(null);
+
   useEffect(() => {
     const $bigBall = document.querySelector('.cursor__ball--big');
     const $smallBall = document.querySelector('.cursor__ball--small');
@@ -35,8 +39,21 @@ const Main = () => {
       $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
     }
 
+    //ScrollPositionSaving
+
+    const saveScrollPosition = () => {
+      sessionStorage.setItem('scrollPosition', window.scrollY);
+    };
+    window.addEventListener('beforereload', saveScrollPosition);
+
+    const scrollPosition = sessionStorage.getItem('scrollPosition');
+    if (scrollPosition) {
+      window.scrollTo(0, parseInt(scrollPosition, 10));
+    }
+
     return () => {
       document.body.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('beforrenload', saveScrollPosition);
       for (let i = 0; i < $hoverables.length; i++) {
         $hoverables[i].removeEventListener('mouseenter', onMouseHover);
         $hoverables[i].removeEventListener('mouseleave', onMouseHoverOut);
@@ -44,17 +61,15 @@ const Main = () => {
     };
   }, []);
 
-  const comp = useRef(null);
-
   useLayoutEffect(() => {
     let context = gsap.context(() => {
       const t1 = gsap.timeline();
       t1.from(
         [
           '#title5',
-          '#title2',
-          '#title1',
           '#title3',
+          '#title1',
+          '#title2',
           '#title4',
           '#title6',
           '#title7',
@@ -65,17 +80,23 @@ const Main = () => {
         {
           opacity: 0,
           y: '-=30',
-          stagger: 0.07,
+          stagger: 0.2,
         },
-      ).to('#slider', {
-        yPercent: '-100',
-        duration: 1,
-        delay: 0.3,
+      );
+
+      t1.add(() => {
+        if (isVideoLoaded) {
+          gsap.to('#slider', {
+            yPercent: '-100',
+            duration: 1,
+            delay: 0.2,
+          });
+        }
       });
     }, comp);
-    return () => context.revert();
-  }, []);
 
+    return () => context.revert();
+  }, [isVideoLoaded]);
   const { onMouseHover, onMouseHoverOut } = useCursor();
 
   return (
@@ -114,7 +135,7 @@ const Main = () => {
       </div>
 
       <Header />
-      <First />
+      <First setIsVideoLoaded={setIsVideoLoaded} videoRef={videoRef} />
       <AboutMe />
       <Skills />
       <Projects />

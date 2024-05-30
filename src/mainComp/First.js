@@ -6,12 +6,32 @@ import github from '../assets/github.png';
 import { useCursor } from '../utils/cursorContext';
 
 import React from 'react';
+import { useRef, useEffect } from 'react';
 
-const First = () => {
+const First = ({ setIsVideoLoaded, videoRef }) => {
   const { onMouseHover, onMouseHoverOut, onClickCursorAnimation } = useCursor();
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+
+    const handleLoadedData = () => {
+      setIsVideoLoaded(true);
+    };
+
+    if (videoElement) {
+      videoElement.addEventListener('loadeddata', handleLoadedData);
+    }
+
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener('loadeddata', handleLoadedData);
+      }
+    };
+  }, []);
+
   return (
     <div className="first">
-      <video className="first__video" src={video} autoPlay muted loop />
+      <video className="first__video" src={video} autoPlay muted loop ref={videoRef} />
 
       <div className="first__title">
         <div className="text">

@@ -9,8 +9,7 @@ import thirdimage from '../assets/planningproject.jpg';
 import lastimage from '../assets/lastproject.jpg';
 
 import firstprojectvideo from '../assets/first_project_video.gif';
-import secondprojectvideo from '../assets/SecondProjectVid.gif';
-import secondprojectvideo2 from '../assets/SecondProjectVid2.mp4';
+import secondprojectvideo2 from '../assets/SecondPrVideo.MP4';
 import thirdprojectimage from '../assets/planningproject2.jpg';
 import { useCursor } from '../utils/cursorContext';
 
@@ -139,10 +138,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="item-inner__back item-inner__back--second">
-                  {/* <img src={secondprojectvideo} alt="Second project video" /> */}
-                  {/* <video width="440" height="300" controls>
-                    <source src={secondprojectvideo2} autoPlay muted loop type="video/mp4"></source>
-                  </video> */}
+                  {/* <img src={secondprojectvideo2} alt="Second project video" /> */}
                   <video src={secondprojectvideo2} autoPlay muted loop />
                   <div className="text">
                     <p className="text__title">About</p>
