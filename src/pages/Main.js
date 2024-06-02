@@ -14,6 +14,8 @@ import gsap from 'gsap';
 
 const Main = () => {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [isFirstAnimationComplete, setIsFirstAnimationComplete] = useState(false);
+  const { onMouseHover, onMouseHoverOut } = useCursor();
   const videoRef = useRef(null);
   const comp = useRef(null);
 
@@ -63,7 +65,9 @@ const Main = () => {
 
   useLayoutEffect(() => {
     let context = gsap.context(() => {
-      const t1 = gsap.timeline();
+      const t1 = gsap.timeline({
+        onComplete: () => setIsFirstAnimationComplete(true),
+      });
       t1.from(
         [
           '#title5',
@@ -83,21 +87,24 @@ const Main = () => {
           stagger: 0.2,
         },
       );
-
-      t1.add(() => {
-        if (isVideoLoaded) {
-          gsap.to('#slider', {
-            yPercent: '-100',
-            duration: 1,
-            delay: 0.2,
-          });
-        }
-      });
     }, comp);
 
     return () => context.revert();
-  }, [isVideoLoaded]);
-  const { onMouseHover, onMouseHoverOut } = useCursor();
+  }, []);
+
+  useEffect(() => {
+    const runSecondAnimation = async () => {
+      if (isFirstAnimationComplete && isVideoLoaded) {
+        await gsap.to('#slider', {
+          yPercent: '-100',
+          duration: 1,
+          delay: 0.2,
+        });
+      }
+    };
+
+    runSecondAnimation();
+  }, [isFirstAnimationComplete, isVideoLoaded]);
 
   return (
     <div className="main_container" ref={comp}>

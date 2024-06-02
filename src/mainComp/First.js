@@ -1,5 +1,4 @@
 import video from '../assets/IMG_0070.MP4';
-import planet from '../assets/planet.png';
 import linkedIn from '../assets/linkedIn.png';
 import github from '../assets/github.png';
 
