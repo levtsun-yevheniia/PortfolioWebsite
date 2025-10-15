@@ -1,30 +1,30 @@
 {
   "files": {
     "main.css": "/PortfolioWebsite/static/css/main.546179fd.css",
-    "main.js": "/PortfolioWebsite/static/js/main.e468e40a.js",
+    "main.js": "/PortfolioWebsite/static/js/main.9a0c6dcc.js",
     "static/js/453.acca0757.chunk.js": "/PortfolioWebsite/static/js/453.acca0757.chunk.js",
     "static/media/IMG_0070.MP4": "/PortfolioWebsite/static/media/IMG_0070.145e7a82654289f7a39a.MP4",
     "static/media/first_project_video.gif": "/PortfolioWebsite/static/media/first_project_video.11901cf2a0cb54200a41.gif",
     "static/media/skills.jpg": "/PortfolioWebsite/static/media/skills.2ee7607b773089734953.jpg",
     "static/media/SecondPrVideo.MP4": "/PortfolioWebsite/static/media/SecondPrVideo.5264b6bd375b8035e34e.MP4",
+    "static/media/Yevheniia_Levtsun_CV.pdf": "/PortfolioWebsite/static/media/Yevheniia_Levtsun_CV.47a4999ff57cd1fd36db.pdf",
     "static/media/sourcecodebackground.jpg": "/PortfolioWebsite/static/media/sourcecodebackground.c59dac41d4dc4f16e44e.jpg",
-    "static/media/Yevheniia_Levtsun_CV.pdf": "/PortfolioWebsite/static/media/Yevheniia_Levtsun_CV.958484dbdf3093da0057.pdf",
     "static/media/lastprojectimage.jpg": "/PortfolioWebsite/static/media/lastprojectimage.9ca36696f237646db588.jpg",
     "static/media/portfolioproject.png": "/PortfolioWebsite/static/media/portfolioproject.12f93da43069c4e8220c.png",
     "static/media/first_project3.jpg": "/PortfolioWebsite/static/media/first_project3.9526bf71104a6e18b2e0.jpg",
     "static/media/lastproject.jpg": "/PortfolioWebsite/static/media/lastproject.23fcdf75a718c3eb9e47.jpg",
     "static/media/planningproject.jpg": "/PortfolioWebsite/static/media/planningproject.9b42fe8c9017d5428af0.jpg",
-    "static/media/photo.jpg": "/PortfolioWebsite/static/media/photo.ed530c48ed398c868c9b.jpg",
+    "static/media/photo.jpg": "/PortfolioWebsite/static/media/photo.997dada39c84f1138ef7.jpg",
     "static/media/contact_photo.png": "/PortfolioWebsite/static/media/contact_photo.b8d8df78f9e30550390d.png",
     "static/media/planningproject2.jpg": "/PortfolioWebsite/static/media/planningproject2.e4145885739a972190f0.jpg",
     "static/media/contact_linkedin.png": "/PortfolioWebsite/static/media/contact_linkedin.81dce58720ef9620279b.png",
     "index.html": "/PortfolioWebsite/index.html",
     "main.546179fd.css.map": "/PortfolioWebsite/static/css/main.546179fd.css.map",
-    "main.e468e40a.js.map": "/PortfolioWebsite/static/js/main.e468e40a.js.map",
+    "main.9a0c6dcc.js.map": "/PortfolioWebsite/static/js/main.9a0c6dcc.js.map",
     "453.acca0757.chunk.js.map": "/PortfolioWebsite/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.546179fd.css",
-    "static/js/main.e468e40a.js"
+    "static/js/main.9a0c6dcc.js"
   ]
 }
