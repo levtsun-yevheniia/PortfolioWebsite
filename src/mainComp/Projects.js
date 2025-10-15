@@ -138,7 +138,6 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="item-inner__back item-inner__back--second">
-                  {/* <img src={secondprojectvideo2} alt="Second project video" /> */}
                   <video src={secondprojectvideo2} autoPlay muted loop />
                   <div className="text">
                     <p className="text__title">About</p>
@@ -150,10 +149,7 @@ const Projects = () => {
                   </div>
 
                   <div className="buttons">
-                    <a
-                      href="http://yevheniialevtsunwebdeveloper.infinityfreeapp.com"
-                      target="_blank"
-                    >
+                    <a href="https://levtsun-yevheniia.github.io/PortfolioWebsite/" target="_blank">
                       <button
                         className="btn btn--first"
                         onMouseEnter={onMouseHover}
