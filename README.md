@@ -1,6 +1,6 @@
 <h1 align="center">Portfolio Website</h1><br>
 
-<strong> You can check this project in real life here: http://yevheniialevtsunportfolio.infinityfreeapp.com/?i=1 </strong> <br> <br>
+<strong> You can check this project in real life here: https://levtsun-yevheniia.github.io/PortfolioWebsite/ </strong> <br> <br>
 
 <h3> Overview: </h3>
 This is a minimalist and sleek portfolio website designed and developed to showcase my skills, projects, and contact information. The website also provides the option to view my resume. It is built using modern web development technologies and libraries to create an interactive and engaging user experience.<br>
